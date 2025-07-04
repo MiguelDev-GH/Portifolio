@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+nav{
+    padding: 2vh;
+    position: fixed;
+    width: 100vw;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    gap: 7vh;
+}
+
+.navitems{
+    font-size: 2vh;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+body {
+    background-color: #1b1b1b;
+}
