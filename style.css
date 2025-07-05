@@ -2,8 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
 }
 
 nav{
@@ -14,15 +21,61 @@ nav{
     display: flex;
     justify-content: center;
     gap: 7vh;
+    z-index: 999999;
+    background: linear-gradient(to bottom, black 20%,rgba(0,0,0,0));
+    gap:5vw;
 }
 
 .navitems{
+    position: relative;
     font-size: 2vh;
     text-decoration: none;
     color: white;
     list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 250;
 }
 
-body {
-    background-color: #1b1b1b;
+.navitems::after{
+    content: "";
+    position: absolute;
+
+    width:0;
+    height: 100%;
+
+    left: 0;
+    top:0;
+
+    background-color: white;
+}
+
+#inicio{
+    margin: 0;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    border-bottom: .7vh solid white;
+    padding: 0 5vw;
+}
+
+#inicio h1{
+    font-size: 7vw;
+    font-weight: 5vh;
+}
+
+#inicio h4{
+    font-weight: 20;
+}
+
+#sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
