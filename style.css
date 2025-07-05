@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 body {
@@ -17,13 +18,18 @@ nav{
     padding: 2vh;
     position: fixed;
     width: 100vw;
-    height: 8vw;
+    height: 6vw;
     display: flex;
     justify-content: center;
-    gap: 7vh;
-    z-index: 999999;
+    align-items: center;
+    z-index: 99992;
     background: linear-gradient(to bottom, black 20%,rgba(0,0,0,0));
     gap:5vw;
+}
+
+nav img{
+    height: 5vh;
+    justify-self: flex-start;
 }
 
 .navitems{
@@ -34,6 +40,9 @@ nav{
     list-style: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 250;
+
+    transition: all .2s ease-out;
+
 }
 
 .navitems::after{
@@ -47,7 +56,46 @@ nav{
     top:0;
 
     background-color: white;
+
+    transition: all .2s ease-out;
+
+    z-index: -1;
 }
+
+.navitems::before{
+    content: "";
+    position: absolute;
+
+    width:0;
+    height: 8%;
+
+    left: 103%;
+    bottom:0;
+
+    background-color: white;
+
+    transition: all .2s ease-out;
+
+    z-index: -1;
+}
+
+.navitems:hover::after{
+    width: 100%;
+}
+
+.navitems:hover::before{
+    width: .9vw;
+}
+
+.navitems:hover{
+    color: black;
+    transform: scale(110%);
+    font-weight: 700;
+}
+
+
+
+
 
 #inicio{
     margin: 0;
@@ -64,13 +112,24 @@ nav{
     padding: 0 5vw;
 }
 
+#inicio::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to top,rgb(255, 255, 255,0.05) 20%,rgba(0,0,0,0));
+}
+
 #inicio h1{
     font-size: 7vw;
     font-weight: 5vh;
 }
 
 #inicio h4{
-    font-weight: 20;
+    font-weight: 300;
 }
 
 #sobre{
