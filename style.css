@@ -153,10 +153,13 @@ nav img{
 }
 
 #sobreInfo{
+    position: relative;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #sobre h1{
@@ -165,10 +168,14 @@ nav img{
     font-style: normal;
 }
 
-#sobreInfo p{
+#sobreInfo p,ul{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
+}
+
+#sobreInfo ul{
+    align-self: flex-start;
 }
 
 #sobreTabs{
@@ -193,6 +200,18 @@ nav img{
     transition: all .2s ease-out;
 }
 
+.sobreInfoItems{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: all .7s ease-out;
+    opacity: 0;
+    font-size: 120%;
+}
+
 .sobreTabsItems:hover{
     font-weight: 700;
     cursor: pointer;
@@ -209,6 +228,11 @@ nav img{
     width: 100%;
     background: linear-gradient(to bottom,#1b1b1b, #767575a9);
     gap: 5vh;
+}
+
+#projetos h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 #projetos::after{
