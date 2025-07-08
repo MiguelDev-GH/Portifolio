@@ -50,13 +50,10 @@ nav img{
 .navitems::after{
     content: "";
     position: absolute;
-
     width:0;
     height: 100%;
-
     left: 0;
     top:0;
-
     background-color: white;
 
     transition: all .2s ease-out;
@@ -67,13 +64,10 @@ nav img{
 .navitems::before{
     content: "";
     position: absolute;
-
     width:0;
     height: 8%;
-
     left: 103%;
     bottom:0;
-
     background-color: white;
 
     transition: all .2s ease-out;
@@ -235,7 +229,7 @@ nav img{
     font-weight: 500;
 }
 
-#projetos::after{
+#projetos::before{
     content: "";
     position: absolute;
     top:0;
@@ -243,6 +237,16 @@ nav img{
     height: 20vh;
     width: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, ) 10%, rgba(255,255,255,0.0) 90%);
+}
+
+#projetos::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: 20vh;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(255,255,255,0.0) 90%);
 }
 
 .projeto{
@@ -285,18 +289,39 @@ nav img{
     gap:10vw;
     background-color: black;
     font-family: "Poppins", sans-serif;
+    font-size: 1.5vh;
 }
 
-.linkItems{
+.linkItems, .linkItemsExtra{
     width: auto;
     height: auto;
-    border-radius:2vw;
+    display: flex;
+    align-items: center;
+    border-radius:3vw;
     border: white solid .1vh;
     background-color: black;
-    transition: all .5s ease-out;
-    padding: .5vw 2vw;
-    user-select: all;
+    transition: all .5s ease;
+    padding: 1vw 2vw;
+    gap: 2vw;
+}
+
+.linkItemsExtra{
+    border: #1b1b1b solid .1vh;
+}
+
+.linkItems a{
     text-decoration: none;
+}
+
+.linkItems div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkItems img{
+    height: 4vh;
+    width: auto;
 }
 
 .linkItems h3{
@@ -304,5 +329,23 @@ nav img{
 }
 
 .linkItems:hover{
+    transform: scale(105%);
+}
+
+.linkItemsExtra:hover{
+    transform: scale(110%);
+}
+
+.copyLink{
+    position: relative;
+    width: 3vw;
+    height: 6vh;
+    border-radius: 50%;
+    border: solid rgba(255, 255, 255, 0.345) .2vw;
+    opacity: .5;
+    transition: all .2s ease;
+}
+
+.copyLink:hover{
     transform: scale(110%);
 }
