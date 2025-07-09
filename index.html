@@ -9,9 +9,12 @@
     
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/scrollbar.css">
 
 </head>
 <body>
+
+    <div id="ResponsiveAlert"><div><h1>A página <b>AINDA</b> não está com compatibilidade para todos os tamanhos de tela...</h1></div></div>
 
     <nav>
 
@@ -33,6 +36,8 @@
     </main>
 
     <div id="sobre">
+
+        <div id="fundoDeg"></div>
 
         <h1>Miguel Chagas Maciel</h1>
 
@@ -99,7 +104,7 @@
                 </div>
             </a>
 
-            <img src='icons/iconCopy.png' alt="Copiar Link" class="copyLink" onclick="linkClicado('https://github.com/migueldev',this)">
+            <img src='icons/iconCopy.png' alt="Copiar Link" class="copyLink" onclick="linkClicado('https://github.com/MiguelDev-GH',this)">
 
         </div>
 
@@ -135,10 +140,12 @@
 
     </div>
 
-    <div id="popup"><h2 id="popupText">adadadadadad</h2></div>
+    <div id="popup"><h2 id="popupText"></h2></div>
 
-    <script src='scripts/tabs.js'></script>
+    <script src='scripts/animarFundoDeg.js'></script>
+    <script src='scripts/tabs.js' type="module"></script>
     <script src='scripts/copyLink.js'></script>
     <script src='scripts/popup.js'></script>
+
 </body>
 </html>
