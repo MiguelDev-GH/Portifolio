@@ -64,7 +64,7 @@ footer::before{
     overflow: auto;
 }
 
-@media screen and (max-width: 950px) or (max-height: 800px){
+@media (max-width: 950px) or (max-height: 800px){
 
     #ResponsiveAlert {
         opacity: 1;
