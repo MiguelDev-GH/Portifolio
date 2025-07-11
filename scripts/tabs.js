@@ -12,9 +12,19 @@ tabsCuriosidades.addEventListener("click", () =>{tabSobre = 3})
 
 function mudarTab(op1,op2,op3){
     fundoDegFunction(tabSobre)
-    document.getElementById("estudos").style.opacity = op1
-    document.getElementById("experiencias").style.opacity = op2
-    document.getElementById("curiosidades").style.opacity = op3
+
+    const estudosDiv = document.getElementById("estudos")
+    const experienciasDiv = document.getElementById("experiencias")
+    const curiosidadesDiv = document.getElementById("curiosidades")
+
+    estudosDiv.style.opacity = op1
+    estudosDiv.style.zIndex = op1
+
+    experienciasDiv.style.opacity = op2
+    experienciasDiv.style.zIndex = op2
+    
+    curiosidadesDiv.style.opacity = op3
+    curiosidadesDiv.style.zIndex = op3
 }
 
 function loop(){
