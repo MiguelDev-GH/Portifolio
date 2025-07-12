@@ -209,16 +209,17 @@ nav img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 100vh;
     gap:2vh;
-    padding: 0 5vw;
+    padding: 10% 0;
 }
 
 #fundoDeg{
     position: absolute;
     width: 100%;
     height: 70%;
-    background: repeating-linear-gradient(90deg, #4545453e, #4545453e .1%, #00000000 .1%, #00000000 1%);
+    background: repeating-linear-gradient(90deg, #ffffff15, #ffffff15 .1%, #00000000 0%, #00000000 1%);
     left: 0;
     top:15%;
     z-index: -1;
@@ -230,6 +231,7 @@ nav img{
     transition: all 1s ease;
 
 }
+
 #sobre::after{
     content: "";
     position: absolute;
@@ -240,19 +242,21 @@ nav img{
     left: 0;
 }
 
+#sobre h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    flex-grow: 2;
+}
+
 #sobreInfo{
     position: relative;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-#sobre h1{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    align-items: flex-start;
+    width: 60%;
+    flex-grow: 6;
 }
 
 #sobreInfo p,ul{
@@ -278,10 +282,12 @@ nav img{
 
 #sobreTabs{
     width: 40vw;
+    max-height: 7%;
     display: flex;
     justify-content: center;
     border-bottom: .5vh solid white;
     border-radius: 0 0 .4vw .4vw;
+    flex-grow: 1;
 }
 
 .sobreTabsItems{
@@ -295,6 +301,7 @@ nav img{
     background-position: bottom;
     width:100%;
     text-align: center;
+    justify-content: center;
     transition: all .2s ease-out;
 }
 
@@ -302,12 +309,12 @@ nav img{
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     pointer-events: none;
     transition: all .7s ease-out;
     opacity: 0;
     font-size: 120%;
+    gap: 1vh;
 }
 
 .sobreTabsItems:hover{
@@ -347,7 +354,7 @@ nav img{
     position: absolute;
     bottom:0;
     left: 0;
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(255,255,255,0.0) 90%);
 }
@@ -382,12 +389,10 @@ nav img{
     position: relative;
     display: flex;
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-direction: row;
-    flex-grow: 0;
-    flex-shrink: 1;
     flex-wrap: wrap;
     gap:10vw;
     background-color: black;
@@ -396,6 +401,7 @@ nav img{
 }
 
 .linkItems, .linkItemsExtra{
+    position: relative;
     width: auto;
     height: auto;
     display: flex;
@@ -405,6 +411,7 @@ nav img{
     background-color: black;
     transition: all .5s ease;
     padding: 1vw 2vw;
+    flex-shrink: 1;
     gap: 2vw;
 }
 
