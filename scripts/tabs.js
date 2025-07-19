@@ -1,5 +1,3 @@
-import { fundoDegFunction } from "./animarFundoDeg.js"
-
 const tabsEstudos = document.getElementById("estudosTab")
 const tabsExperiencias = document.getElementById("experienciasTab")
 const tabsCuriosidades = document.getElementById("curiosidadesTab")

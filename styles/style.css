@@ -330,7 +330,7 @@ nav img{
 #projetos{
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -374,12 +374,16 @@ nav img{
     display: block;
 }
 
+#projeto1{
+    display: block;
+}
+
 .projInfo{
     font-family: "Poppins", sans-serif;
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     bottom:0;
     left: 0;
     z-index: 2;

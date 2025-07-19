@@ -1,4 +1,4 @@
-export function fundoDegFunction(tabSobre){
+function fundoDegFunction(tabSobre){
 
     const fundoDegStyle = document.getElementById("fundoDeg").style
 
