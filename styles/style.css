@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 
 html{
@@ -13,7 +12,22 @@ html{
 }
 
 body {
-    background-color: #1b1b1b;
+    /* background-color: #1b1b1b; */
+    background-color: #ffffff; 
+    color: rgb(255, 255, 255);
+}
+
+#fundobg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image:  linear-gradient(30deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(150deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(30deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(150deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(60deg, #98989877 25%, transparent 25.5%, transparent 75%, #98989877 75%, #98989877), linear-gradient(60deg, #98989877 25%, transparent 25.5%, transparent 75%, #98989877 75%, #98989877);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    z-index: -1; /* Use -1 para garantir que fique atrás do conteúdo */
 }
 
 footer{
@@ -213,13 +227,14 @@ nav img{
     height: 100vh;
     gap:2vh;
     padding: 10% 0;
+    color: black;
 }
 
 #fundoDeg{
     position: absolute;
     width: 100%;
     height: 70%;
-    background: repeating-linear-gradient(90deg, #ffffff07, #ffffff07 .1%, #00000000 0%, #00000000 1%);
+    background: repeating-linear-gradient(90deg, #cccaca44, #cccaca44 1%, #00000000 .5%, #00000000 1%);
     left: 0;
     top:15%;
     z-index: -1;
@@ -237,7 +252,7 @@ nav img{
     position: absolute;
     height: 10vh;
     width: 100%;
-    background: linear-gradient(to bottom,rgb(255, 255, 255,0.2),rgba(255,255,255,0));
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.2),rgba(255,255,255,0));
     top: 0;
     left: 0;
 }
@@ -247,6 +262,8 @@ nav img{
     font-weight: 500;
     font-style: normal;
     flex-grow: 2;
+
+    color: black;
 }
 
 #sobreInfo{
@@ -257,12 +274,16 @@ nav img{
     align-items: flex-start;
     width: 60%;
     flex-grow: 6;
+
+    color: black;
 }
 
 .sobreInfoItems p, .sobreInfoItems ul{
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
+
+    color: black;
 }
 
 .sobreInfoItems ul{
@@ -271,6 +292,8 @@ nav img{
     gap: 1vh; /* Aplica o mesmo espaçamento do container pai */
     list-style-position: inside; /* Garante que os marcadores da lista fiquem visíveis */
     padding-left: 0; /* Remove o recuo padrão da lista para um alinhamento perfeito */
+
+    color: black;
 }
 
 /*
@@ -288,18 +311,20 @@ nav img{
     width: 40vw;
     max-height: 7%;
     display: flex;
+    font-weight: 400;
     justify-content: center;
-    border-bottom: .5vh solid white;
+    border-bottom: .5vh solid rgb(0, 0, 0);
     border-radius: 0 0 .4vw .4vw;
     flex-grow: 1;
+    color: black;
 }
 
 .sobreTabsItems{
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 1vw;
-    color: white;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3) 10%, rgba(255,255,255,0.0) 90%);
+    color: black;
+    background-image: linear-gradient(to top, rgba(102, 102, 102, 0.3) 10%, rgba(255,255,255,0.0) 90%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -319,12 +344,14 @@ nav img{
     opacity: 0;
     font-size: 120%;
     gap: 1vh;
+    color: black;
 }
 
 .sobreTabsItems:hover{
     font-weight: 700;
     cursor: pointer;
     background-size: 100% 0;
+    color: black;
 }
 
 #projetos{
@@ -341,6 +368,10 @@ nav img{
 #projetos h1{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+}
+
+#ProjDireita, #ProjEsquerda{
+    width: 100px;
 }
 
 #projetos::before{
@@ -361,6 +392,34 @@ nav img{
     height: 10vh;
     width: 100%;
     background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(255,255,255,0.0) 90%);
+}
+
+#contadorProjDiv{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.contadorprojeto{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    transition: opacity .5s ease-in-out;
+    opacity: .5;
+
+}
+
+.contadorativo{
+    opacity: 1;
 }
 
 .projeto{
@@ -414,13 +473,14 @@ nav img{
     height: auto;
     display: flex;
     align-items: center;
-    border-radius:3vw;
+    border-radius:2vw;
     border: white solid .1vh;
     background-color: black;
     transition: all .5s ease;
     padding: 1vw 2vw;
     flex-shrink: 1;
     gap: 2vw;
+    color:white;
 }
 
 .linkItemsExtra{
