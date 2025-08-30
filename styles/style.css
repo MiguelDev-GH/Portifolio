@@ -23,7 +23,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.06;
     background-image:  linear-gradient(30deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(150deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(30deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(150deg, #989898 12%, transparent 12.5%, transparent 87%, #989898 87.5%, #989898), linear-gradient(60deg, #98989877 25%, transparent 25.5%, transparent 75%, #98989877 75%, #98989877), linear-gradient(60deg, #98989877 25%, transparent 25.5%, transparent 75%, #98989877 75%, #98989877);
     background-size: 80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
@@ -234,7 +234,7 @@ nav img{
     position: absolute;
     width: 100%;
     height: 70%;
-    background: repeating-linear-gradient(90deg, #cccaca44, #cccaca44 1%, #00000000 .5%, #00000000 1%);
+    background: repeating-linear-gradient(90deg, #0000000c, #0000000c 1%, #00000000 .5%, #00000000 1%);
     left: 0;
     top:15%;
     z-index: -1;
@@ -354,13 +354,23 @@ nav img{
     color: black;
 }
 
+#projetosAba{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1300px;
+    gap: 30px;
+    margin-top: -300px;
+}
+
 #projetos{
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
     gap: 5vh;
 }
@@ -374,17 +384,7 @@ nav img{
     width: 100px;
 }
 
-#projetos::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 20vh;
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, ) 10%, rgba(255,255,255,0.0) 90%);
-}
-
-#projetos::after{
+#projetosAba::after{
     content: "";
     position: absolute;
     bottom:0;
@@ -431,6 +431,7 @@ nav img{
     height: 60vh;
     border-radius: 2vh;
     display: block;
+    cursor: pointer;
 }
 
 #projeto1{
@@ -456,7 +457,7 @@ nav img{
     position: relative;
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 1300px;
     justify-content: center;
     align-content: center;
     flex-direction: row;
