@@ -99,6 +99,10 @@ a{
 }
 
 @media (max-width: 1000px){ 
+
+    body{
+        overflow-y: auto;
+    }
     
     main{
         padding: 0;
@@ -119,6 +123,8 @@ a{
 
     #imagens{
         flex-direction: column !important;
+        padding:50px;
+        padding-bottom:100px ;
     }
 }
 
