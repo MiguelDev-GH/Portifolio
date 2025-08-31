@@ -98,13 +98,37 @@ a{
     }
 }
 
+@media (max-width: 1000px){ 
+    
+    main{
+        padding: 0;
+    }
+
+    main container {
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-direction: column !important;
+        gap:50px;
+        padding-bottom: 50px;
+    }
+
+    #infos{
+        max-width: 500px;
+    }
+
+    #imagens{
+        flex-direction: column !important;
+    }
+}
+
 main{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
-    padding: 50px;
+    padding: 50px !important;
     height: 600px;
 }
 
@@ -178,6 +202,7 @@ p{
 }
 
 #imagens{
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: row;
