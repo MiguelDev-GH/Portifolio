@@ -246,7 +246,7 @@ p{
 #hover{
     opacity: 0;
     position: absolute;
-    top:70%;
+    top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     filter: blur(0);
@@ -274,4 +274,5 @@ p{
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease;
+
 }
