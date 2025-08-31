@@ -21,8 +21,10 @@ function atualizarDisplayProjetos() {
         contadorDiv.appendChild(contElem);
 
         const projetoEl = document.getElementById(`projeto${i}`);
+
         if (projetoEl) {
-            projetoEl.style.display = (i === projAtual) ? "flex" : "none";
+            projetoEl.style.opacity = (i === projAtual) ? 1 : 0;
+            projetoEl.style.zIndex = (i === projAtual) ? 1 : 0;
         }
     }
 }
@@ -45,3 +47,26 @@ atualizarDisplayProjetos();
 
 setaDireita.addEventListener("click", avancarProjeto);
 setaEsquerda.addEventListener("click", retrocederProjeto);
+
+function loop(){
+    requestAnimationFrame(loop)
+
+    if(projAtual == 1){
+        setaEsquerda.style.opacity = 0;
+        setaEsquerda.style.cursor = "auto"
+    } else{
+        setaEsquerda.style.opacity = 1;
+        setaEsquerda.style.cursor = "pointer"
+    }
+
+    if(projAtual == projQntd){
+        setaDireita.style.opacity = 0;
+        setaDireita.style.cursor = "auto"
+    } else {
+        setaDireita.style.opacity = 1;
+        setaDireita.style.cursor = "pointer"
+    }
+
+}
+
+loop()

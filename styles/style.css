@@ -382,6 +382,15 @@ nav img{
 
 #ProjDireita, #ProjEsquerda{
     width: 100px;
+    transition: all .5s ease;
+}
+
+#ProjDireita:hover{
+    transform: scale(105%);
+}
+
+#ProjEsquerda:hover{
+    transform: scale(105%);
 }
 
 #projetosAba::after{
@@ -435,7 +444,7 @@ nav img{
 }
 
 #projeto1{
-    display: block;
+    position: absolute;
 }
 
 .projInfo{
