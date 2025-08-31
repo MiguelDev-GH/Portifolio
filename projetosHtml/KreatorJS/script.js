@@ -1,41 +1,11 @@
-/*
+const hoverP = document.getElementById("hover")
 
-const overlay = document.getElementById("overlay");
+function hover(){
+    hoverP.style.opacity = 1;
+}
 
-const imgs = [
-    document.getElementById("img1"),
-    document.getElementById("img2"),
-    document.getElementById("img3"),
-    document.getElementById("img4"),
-]
+function hoverout(){
+    hoverP.style.opacity = 0;
+}
 
-let ativado = false;
-
-imgs.map((img) => {
-    img.addEventListener("click",(e)=>{
-
-        thisImg = e.target;
-        
-        if(!ativado){      
-            
-            overlay.classList.add('visivel');
-            thisImg.classList.add("ativa");
-            ativado = true;
-
-        } else {
-            
-            ativado = false;
-
-            thisImg.style.opacity = 0;
-
-            setInterval(()=>{
-                overlay.classList.remove('visivel');
-                thisImg.classList.remove("ativa");
-                thisImg.style.opacity = 1;
-            },500)
-
-        }
-})
-})
-
-*/
+document.getElementById("imagens").addEventListener("mouseout",hoverout);
