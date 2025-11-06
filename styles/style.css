@@ -380,9 +380,64 @@ nav img{
     margin: 20px 0;
 }
 
-#projetosAba{
+#censura{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    backdrop-filter: blur(75px);
+    -webkit-backdrop-filter: blur(75px);
+    background-color: #0000006e;
+    border-radius: inherit;
+    border-radius: 50px;
+}
+
+#cens1{
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#cens2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    width: 300px;
+    border: solid rgba(128, 128, 128, 0.5) 2px;
+    border-radius: 30px;
+    z-index: 999999991;
+}
+
+#cens2 a{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+#cens2 img{
+    height: 60px;
+}
+
+#projetosAba{
+    
+    position: relative;
+    display: flex;
+
+    display:none; /* TIRAR ALGUMA HR */
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -403,7 +458,7 @@ nav img{
     gap: 5vh;
 }
 
-#projetos h1{
+#projetosAba h1{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
@@ -515,6 +570,17 @@ nav img{
     font-family: "Poppins", sans-serif;
     font-size: 1.5vh;
 }
+
+#links::after{
+    content: "";
+    position: absolute;
+    top:-10vh;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(255,255,255,0.0) 90%);
+}
+
 
 .linkItems, .linkItemsExtra{
     position: relative;
